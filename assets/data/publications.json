@@ -1,0 +1,146 @@
+{
+  "pub14": {
+    "title": "Graph Representational Learning for bandgap prediction in varied perovskite crystals",
+    "authors": "Pravan Omprakash, Bharadwaj M, Romit Srivastava, Ankit Sandeep, Viswesh P, Devadas Bhat Panemangalore",
+    "year": 2021,
+    "venue": "Computational Material Science",
+    "abstract": "Perovskites are an important class of materials that are actively researched for applications in solar cells, other optoelectronic devices due to their ease of fabrication, tuneable bandgaps. High throughput computational techniques like Density Functional Theory (DFT), Machine Learning (ML) are viable methods to accelerate discovery of new perovskite materials with favourable properties. ML specifically is faster, requires lesser computational power. We recognized the importance of having robust datasets for ML, hence collated a dataset of varied perovskite structures along with their indirect bandgaps. We employed a graph representational learning technique, trained a model that predicted bandgaps for all types of perovskites. The model has a mean absolute error of 0.28 eV, can predict bandgap in a few milliseconds. The metric of generalization gap is introduced to quantify the …",
+    "scholar": "https://www.sciencedirect.com/science/article/pii/S0927025621002573",
+    "doi": ""
+  },
+  "pub11": {
+    "title": "Energy Storage through Graphite Intercalation Compounds",
+    "authors": "Varun Gopalakrishnan, Anushpamathi Sundararajan, Pravan Omprakash, Devadas Bhat Panemangalore",
+    "year": 2021,
+    "venue": "Journal of The Electrochemical Society",
+    "abstract": "Research, development with regards to battery technologies have been evolving at a profitably good rate with an impressive amount of progress being made at different levels. Graphite has been continuously preferred as the anode material for lithium-ion batteries since its commercialization in 1991. The interlayer spacing of about 3.35 Å promotes the intercalation of guest ions, thereby resulting in what is called graphite intercalation compounds (GICs). Through such intercalation mechanisms, graphite can contribute to electrochemical charge transfer owing to its ionic, electronic conduction properties. The intercalation of alkali metal ions into graphite is considered the epitome of ion intercalation with regards to layered materials. Putting together various inferences made through the years, this review aims at establishing a foundational understanding of GICs, their applications in energy storage devices …",
+    "scholar": "https://iopscience.iop.org/article/10.1149/1945-7111/abf973/meta",
+    "doi": ""
+  },
+  "pub13": {
+    "title": "A Review of 2D Perovskites, Carbon-Based Nanomaterials for Applications in Solar Cells, Photodetectors",
+    "authors": "Pravan Omprakash, Viswesh P, Devadas Bhat Panemangalore",
+    "year": 2021,
+    "venue": "ECS Journal of Solid State Science, Technology",
+    "abstract": "Photonic devices such as solar cells, photodetectors that produce electricity play a vital role in our daily life for applications such as fibre optic communication systems, process control,, also in defence related applications. Today, two-dimensional perovskites that belong to the class of emerging materials show promising energy applications. 2D perovskites have been investigated for their exceptional properties such as high optical absorption coefficients, structural diversity, tuneable bandgaps which allow their application as active light absorbing materials to develop solar cells, photodetectors. Carbon-based nanomaterials have also found applications as transparent electrodes, charge acceptors, photosensitive layers in solar cells, photodetectors due to properties such as excellent electrical conductivity, high optical transparency, high surface area, remarkable mechanical strength …",
+    "scholar": "https://iopscience.iop.org/article/10.1149/2162-8777/abefaf/meta",
+    "doi": ""
+  },
+  "pub9": {
+    "title": "A radiographic, deep transfer learning framework, adapted to estimate lung opacities from chest x-rays",
+    "authors": "Avantika Vardhan, Alex Makhnevich, Pravan Omprakash, David Hirschorn, Matthew Barish, Stuart L Cohen, Theodoros P Zanos",
+    "year": 2023,
+    "venue": "Bioelectronic Medicine",
+    "abstract": "Chest radiographs (CXRs) are the most widely available radiographic imaging modality used to detect respiratory diseases that result in lung opacities. CXR reports often use non-standardized language that result in subjective, qualitative,, non-reproducible opacity estimates. Our goal was to develop a robust deep transfer learning framework, adapt it to estimate the degree of lung opacity from CXRs. Following CXR data selection based on exclusion criteria, segmentation schemes were used for ROI (Region Of Interest) extraction,, all combinations of segmentation, data balancing,, classification methods were tested to pick the top performing models. Multifold cross validation was used to determine the best model from the initial selected top models, based on appropriate performance metrics, as well as a novel Macro-Averaged Heatmap Concordance Score (MA HCS). Performance of the best model …",
+    "scholar": "https://link.springer.com/article/10.1186/s42234-022-00103-0",
+    "doi": ""
+  },
+  "pub10": {
+    "title": "AuthNet: A Deep Learning Based Authentication Mechanism Using Temporal Facial Feature Movements (Student Abstract)",
+    "authors": "Mohit Raghavendra, Pravan Omprakash, Mukesh B R",
+    "year": 2021,
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "abstract": "Deep learning algorithms are widely used to extend modern biometric authentication mechanisms in resource-constrained environments like smartphones, providing ease-of-use, user comfort, while maintaining a non-invasive nature. In this paper, an alternative is proposed, that uses both facial recognition, the unique movements of that particular face while uttering a password. The proposed model is language independent, the password doesn't necessarily need to be a set of meaningful words or numbers,, also, is a contact-less system. When evaluated on the standard MIRACL-VC1 dataset, the proposed model achieved a testing accuracy of 98.1%, underscoring its effectiveness.",
+    "scholar": "https://ojs.aaai.org/index.php/AAAI/article/view/17933",
+    "doi": ""
+  },
+  "pub12": {
+    "title": "Carbon, metallic based nanomaterials for strain sensors - a review",
+    "authors": "Pravan Omprakash, Udaya Bhat K, Devadas Bhat Panemangalore",
+    "year": 2021,
+    "venue": "Current Nanomaterials",
+    "abstract": "Strain gauges are devices whose electrical resistances vary proportionately with the amount of strain applied on the device. They can be used for real-time applications in the aerospace sector, as a geotechnical tool in tunnels, bridges, in rail monitoring, health monitoring sectors.  Nanomaterials have been widely used for this application because they can be flexible, stretchable, have high strength. Several researchers have used numerous carbon-based, metallic nanostructures to develop functionally graded materials. Among carbon-based materials, graphene has been  widely researched as a viable material for strain sensors due to its superior mechanical, electrical properties. Also, many metallic nanoparticles have been investigated to design strain sensors that are highly sensitive to a wide range of strains. In this article, a review of carbon,  metallic nanomaterial-based strain sensors is …",
+    "scholar": "https://www.benthamdirect.com/content/journals/cnm/10.2174/2405461506666210112151221",
+    "doi": ""
+  },
+  "pub15": {
+    "title": "Deep learning-based optimization of piezoelectric vibration energy harvesters",
+    "authors": "Abhilash M Menon, Tanmayee R Kopparthi, Pravan Omprakash, Harikesh Verma, Ayan Haldar, Soumya Swayamjyoti, Kisor K Sahu, Carol Featherston",
+    "year": 2022,
+    "venue": "",
+    "abstract": "View Video Presentation: https://doi.org/10.2514/6.2022-2142.vidAdvances in energy harvesting technologies present prospective concepts to capture, store energy from the environment, use it to power sensors used in Structural Health Monitoring (SHM) systems. Among many others, ambient vibrations are a ubiquitous source of energy that has the potential to charge low-powered sensors attached to aircraft structures. This study aims at designing a vibrational-based energy harvesting system consisting of Macro-Fiber Composite (MFC) patches bonded to a cantilever beam with optimal design parameters. As a base model, an electromechanically coupled Finite Element (FE) model is first developed to predict the open-source voltage when subjected to input excitation, which is validated using previous experimental data. Subsequently, the harvested power is found by simulating an electrical circuit …",
+    "scholar": "https://arc.aiaa.org/doi/abs/10.2514/6.2022-2142",
+    "doi": ""
+  },
+  "pub8": {
+    "title": "Ferroelectricity in Hafnia: The Origin of Nanoscale Stabilization",
+    "authors": "Xin Li, Guodong Ren, Haidong Lu, Kartik Samanta, Amit Kumar Shah, Pravan Omprakash, Yu Yun, Pratyush Buragohain, Huibo Cao, Jordan A Hachtel, Andrew R Lupini, Miaofang Chi, Evgeny Y Tsymbal, Alexei Gruverman, Rohan Mishra, Xiaoshan Xu",
+    "year": 2024,
+    "venue": "arXiv preprint arXiv:2408.01830",
+    "abstract": "The discovery of ferroelectricity in hafnia-based materials have boosted the potential of incorporating ferroelectrics in advanced electronics, thanks to their compatibility with silicon technology. However, comprehending why these materials defy the common trend of reduced ferroelectric ordering at the nanoscale,, the mechanism that stabilizes the ferroelectric phase (absent in hafnia phase diagram) presents significant challenges to traditional knowledge of ferroelectricity. In this work, we show that the formation of the orthorhombic ferroelectric phase (o-FE, space group Pca21) of the single-crystalline epitaxial films of 10% La-doped HfO2 (LHO) on (111)-oriented yttria stabilized zirconia (YSZ) relies on the stability of the high-pressure orthorhombic antiferroelectric phase (o-AFE, space group Pbca). Our detailed structural characterizations demonstrate that as-grown LHO films represent largely the o-AFE phase being thermodynamically stabilized by the compressive strain. Our Kelvin probe force microscopy studies show, under mechanical poling, the o-AFE phase is converted to the o-FE phase which remains stable under ambient conditions. We find that the orthorhombic phase stability is enhanced in thinner films down to one-unit-cell thickness, a trend that is unknown in any other ferroelectric films. This is due to the vanishing depolarization field of the o-AFE phase, the isomorphic LHO/YSZ interface, supporting strain-enhanced ferroelectricity in the ultrathin films. This results in an unprecedented increase of the Curie temperature up to 850 {\\deg}C, the highest reported for sub-nanometer-thick ferroelectrics. Overall, our findings opens …",
+    "scholar": "https://arxiv.org/abs/2408.01830",
+    "doi": ""
+  },
+  "pub7": {
+    "title": "Polarization pinning at antiphase boundaries in multiferroic YbFeO3",
+    "authors": "Guodong Ren, Pravan Omprakash, Xin Li, Yu Yun, Arashdeep S Thind, Xiaoshan Xu, Rohan Mishra",
+    "year": 2024,
+    "venue": "Chinese Physics B",
+    "abstract": "The switching characteristics of ferroelectrics, multiferroics are influenced by the interaction of topological defects with domain walls. We report on the pinning of polarization due to antiphase boundaries in thin films of the multiferroic hexagonal YbFeO 3. We have directly resolved the atomic structure of a sharp antiphase boundary (APB) in YbFeO 3 thin films using a combination of aberration-corrected scanning transmission electron microscopy (STEM), total energy calculations based on density-functional theory (DFT). We find the presence of a layer of FeO 6 octahedra at the APB that bridges the adjacent domains. STEM imaging shows a reversal in the direction of polarization on moving across the APB, which DFT calculations confirm is structural in nature as the polarization reversal reduces the distortion of the FeO 6 octahedral layer at the APB. Such APBs in hexagonal perovskites are expected to serve …",
+    "scholar": "https://iopscience.iop.org/article/10.1088/1674-1056/ad8cbc/meta",
+    "doi": ""
+  },
+  "pub1": {
+    "title": "Design Rules, Discovery of Face-Sharing Hexagonal Perovskites",
+    "authors": "MJ Swamynadhan, Gwan Yeong Jung, Pravan Omprakash, Rohan Mishra",
+    "year": 2025,
+    "venue": "arXiv preprint arXiv:2508.09088",
+    "abstract": "Hexagonal perovskites with face-sharing octahedral connectivity are an underexplored class of materials. We propose quantitative design principles for stabilizing face-sharing ABX3 hexagonal perovskites based on a comparative analysis of oxides, sulfides. By mapping structural preferences across a phase-space defined by an electronegativity-corrected tolerance factor, the Shannon radius of the A-site cations, we identify distinct thresholds that separate hexagonal phases from competing cubic polymorphs having corner-sharing octahedral connectivity. Our analysis reveals that sulfides differ significantly from oxides due to the increased covalency of the transition metal-sulfur bonds, which enables broader compositional flexibility. Applying these principles, we predict a set of thermodynamically formable ABO3, ABS3 compounds that are likely to adopt face-sharing octahedral connectivity. These findings establish a predictive framework for designing hexagonal perovskites, highlighting sulfides as promising candidates for obtaining quasi-one-dimensional materials having transition-metal cations for novel ferroic phenomena.",
+    "scholar": "https://arxiv.org/abs/2508.09088",
+    "doi": ""
+  },
+  "pub2": {
+    "title": "Hole-doping reduces the coercive field in ferroelectric hafnia",
+    "authors": "Pravan Omprakash, Gwan Yeong Jung, Guodong Ren, Rohan Mishra",
+    "year": 2025,
+    "venue": "arXiv preprint arXiv:2508.05345",
+    "abstract": "Ferroelectric hafnia holds promise for next-generation memory, logic applications because of its CMOS compatibility. However, the high coercive field required for polarization switching in hafnia remains a critical challenge for efficient device operations. Using first-principles calculations, phenomenological modeling, we predict that hole doping can reduce the coercive field from 8 MV/cm in undoped hafnia to 6 MV/cm in hafnia doped with 0.2 holes per formula unit (f.u.). In the absence of doping, the reversal of polarization of the Pca21 phase is preferred through the non-polar, tetragonal P42/nmc phase. This switching pathway involves the coupling of three hard distortion modes that render undoped hafnia as an improper ferroelectric. The overall energy barrier through this pathway remains unchanged (80 meV/f.u.) upon hole doping. However, the introduction of holes hardens the polar distortion mode that connects the polar Pca21 phase to the non-polar, orthorhombic Pbcm phase,, reduces the energy barrier from 180 meV/f.u. in undoped hafnia to 80 meV/f.u. at 0.2 holes/f.u.. Overall, hole doping makes the latter switching pathway through the Pbcm phase competitive,, renders hafnia as a proper ferroelectric with a lower coercive field.",
+    "scholar": "https://arxiv.org/abs/2508.05345",
+    "doi": ""
+  },
+  "pub3": {
+    "title": "Atomic-scale confinement of strongly charged 180 degree domain wall pairs in ZrO2",
+    "authors": "Nashrah Afroze, Hamoon Fahrvandi, Guodong Ren, Pawan Kumar, Christopher Nelson, Sarah Lombardo, Mengkun Tian, Ping-Che Lee, Jiayi Chen, Manifa Noor, Kisung Chae, Sanghyun Kang, Prasanna Venkat Ravindran, Matthew Bergschneider, Gwan Yeong Jung, Pravan Omprakash, Gardy K Ligonde, Nujhat Tasneem, Dina Triyoso, Steven Consiglio, Kanda Tapily, Robert Clark, Gert Leusink, Jayakanth Ravichandran, Shimeng Yu, Andrew Lupini, Andrew Kummel, Kyeongjae Cho, Duk-Hyun Choe, Nazanin Bassiri-Gharb, Josh Kacher, Rohan Mishra, Jun Hee Lee, Asif Khan",
+    "year": 2025,
+    "venue": "arXiv preprint arXiv:2507.18920",
+    "abstract": "Self organized polar textures can occur in ferroelectric materials across multiple length scales, from nanometer scale vortices, skyrmions, to mesoscopic stripe domains,, macroscopic twin patterns, making these phenomena central to condensed matter physics, nanotechnology. Silicon compatible ferroelectrics such as HfO2, ZrO2 spontaneously form alternating stacks of two dimensional (2D) polar, nonpolar half unit cell layers, effectively confining dipoles to isolated, single atomic plane layers. However, the arrangement of dipoles within each polar plane is generally considered uniform. Here, by utilizing scanning transmission electron microscopy (STEM) of an ultrathin ZrO2 film in the plan view orientation, we show that within these irreducibly narrow polar layers, the dipole organization can be strikingly non-uniform, forming atomically thin, dimensionally confined, charged 180 degree domain walls, at most a few unit cells long, alternating between head to head, tail to tail configurations. Head to head, tail to tail walls each adopt completely distinctive interfacial structures, confine the in-plane domains to a sub nm2 footprint, making them one of the smallest domains to be reported in any polar material. This work represents the first experimental observation of antipolar ferroic ordering via strongly charged domain walls, while being nested within the self organized polar nonpolar layering, revealing a novel hierarchical self-organization of polar textures at the atomic scale,, opening new pathways to atomically dense memories, domain wall nanoelectronics in silicon compatible, simple binary oxides.",
+    "scholar": "https://arxiv.org/abs/2507.18920",
+    "doi": ""
+  },
+  "pub4": {
+    "title": "Design Principles, Identification of Birefringent Materials",
+    "authors": "Gwan Yeong Jung, Guodong Ren, Pravan Omprakash, Jayakanth Ravichandran, Rohan Mishra",
+    "year": 2025,
+    "venue": "Chemistry of Materials",
+    "abstract": "Birefringence (Δn) is the dependence of the refractive index of a material on the polarization of light traveling through it. Birefringent materials are used as polarizers, waveplates,, for novel light-matter coupling. While several birefringent materials exist, only a handful of them show large Δn > 0.3, are primarily limited to the infrared region. The variation of Δn across diverse materials classes, strategies to achieve highly birefringent materials with transparency covering different regions of the electromagnetic spectrum is missing. We have calculated the Δn of 967 noncubic, formable crystals having vastly different structures, polyhedral connectivities,, chemical compositions. From this set of compounds, we have screened highly birefringent crystals (Δn > 0.3) having transparency in different regions of the electromagnetic spectrum. The screened compounds belong to several families such as A3′MN3 …",
+    "scholar": "https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.5c00977",
+    "doi": ""
+  },
+  "pub5": {
+    "title": "Mic-hackathon 2024: Hackathon on Machine Learning for Electron, Scanning Probe Microscopy",
+    "authors": "Utkarsh Pratiush, Austin Houston, Kamyar Barakati, Aditya Raghavan, Dasol Yoon, Harikrishnan KP, Zhaslan Baraissov, Desheng Ma, Samuel S Welborn, Mikolaj Jakowski, Shawn-Patrick Barhorst, Alexander J Pattison, Panayotis Manganaris, Sita Sirisha Madugula, Sai Venkata Gayathri Ayyagari, Vishal Kennedy, Ralph Bulanadi, Michelle Wang, Kieran J Pang, Ian Addison-Smith, Willy Menacho, Horacio V Guzman, Alexander Kiefer, Nicholas Furth, Nikola L Kolev, Mikhail Petrov, Viktoriia Liu, Sergey Ilyev, Srikar Rairao, Tommaso Rodani, Ivan Pinto-Huguet, Xuli Chen, Josep Cruañes, Marta Torrens, Jovan Pomar, Fanzhi Su, Pawan Vedanti, Zhiheng Lyu, Xingzhi Wang, Lehan Yao, Amir Taqieddin, Forrest Laskowski, Xiangyu Yin, Yu-Tsun Shao, Benjamin Fein-Ashley, Yi Jiang, Vineet Kumar, Himanshu Mishra, Yogesh Paul, Adib Bazgir, Yuwen Zhang, Pravan Omprakash, Jian Huang, Eric Montufar-Morales, Vivek Chawla, Harshit Sethi, Jie Huang, Lauri Kurki, Grace Guinan, Addison Salvador, Arman Ter-Petrosyan, Madeline Van Winkle, Steven R Spurgeon, Ganesh Narasimha, Zijie Wu, Richard Liu, Yongtao Liu, Boris Slautin, Andrew R Lupini, Rama Vasudevan, Gerd Duscher, Sergei V Kalinin",
+    "year": 2025,
+    "venue": "arXiv preprint arXiv:2506.08423",
+    "abstract": "Microscopy is a primary source of information on materials structure, functionality at nanometer, atomic scales. The data generated is often well-structured, enriched with metadata, sample histories, though not always consistent in detail or format. The adoption of Data Management Plans (DMPs) by major funding agencies promotes preservation, access. However, deriving insights remains difficult due to the lack of standardized code ecosystems, benchmarks,, integration strategies. As a result, data usage is inefficient, analysis time is extensive. In addition to post-acquisition analysis, new APIs from major microscope manufacturers enable real-time, ML-based analytics for automated decision-making, ML-agent-controlled microscope operation. Yet, a gap remains between the ML, microscopy communities, limiting the impact of these methods on physics, materials discovery,, optimization. Hackathons help bridge this divide by fostering collaboration between ML researchers, microscopy experts. They encourage the development of novel solutions that apply ML to microscopy, while preparing a future workforce for instrumentation, materials science,, applied ML. This hackathon produced benchmark datasets, digital twins of microscopes to support community growth, standardized workflows. All related code is available at GitHub: https://github.com/KalininGroup/Mic-hackathon-2024-codes-publication/tree/1.0.0.1",
+    "scholar": "https://arxiv.org/abs/2506.08423",
+    "doi": ""
+  },
+  "pub6": {
+    "title": "SymPlex Plots for Visualizing Properties in High-Dimensional Alloy Spaces",
+    "authors": "John Cavin, Pravan Omprakash, Adrien Couet, Rohan Mishra",
+    "year": 2025,
+    "venue": "arXiv preprint arXiv:2504.03973",
+    "abstract": "Conventional visualization tools such as phase diagrams, convex hulls are ill-suited to visualize multiple principal element alloys (MPEAs) due to their large compositional space that cannot be easily projected onto two dimensions. Here, SymPlex plots are introduced to enable the visualization of various properties along special paths in high-dimensional phase spaces of MPEAs. These are polar heatmaps that plot properties along high-symmetry paths radiating from the parent equimolar MPEA to a set of chosen lower-order compositions. SymPlex plots capture the changes in the energy landscape along the special paths, help visualize the effect of addition or substitution of components on the alloy stability, which can be especially useful to assess processing pathways for additive manufacturing. Thus, SymPlex plots can help guide design of MPEAs by showing connections between compositions, their properties in the high-dimensional phase space with more information concentrated near the equimolar region.",
+    "scholar": "https://arxiv.org/abs/2504.03973",
+    "doi": ""
+  },
+  "pub16": {
+    "title": "Robust Deep Learning Models for Inverse Design of Complex Mechanical Metamaterial Structures",
+    "authors": "Pravan Omprakash, Neelam Mishra, Ayan Haldar, Niraj Jha, Jyotiraditya Bose, Arkadipta Chaterjee, S Swayamjyoti, Kisor Kumar Sahu",
+    "year": 2022,
+    "venue": "",
+    "abstract": "",
+    "scholar": "",
+    "doi": ""
+  }
+}
