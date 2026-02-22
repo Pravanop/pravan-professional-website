@@ -16,33 +16,21 @@
 <body>
 
   <!-- Landing Page -->
-  <div id="landing">
-    <h1 id="typed-name"></h1>
+  <!-- Landing Overlay (plays once, then disappears) -->
+<div id="landing" class="landing-overlay" aria-hidden="false">
+  <h1 id="typed-name"></h1>
+</div>
 
-    <!-- Mobile menu toggle (shown only on small screens) -->
-    <!-- Simple mobile menu toggle (shown only on small screens) -->
-    <button class="mobile-menu-btn" id="mobile-menu-btn"
-            aria-label="Open menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu">
-      <i class="fa-solid fa-bars"></i>
-      <span class="mobile-menu-label">Menu</span>
-    </button>
-
-    <nav class="menu-links" id="mobile-menu" aria-label="Site navigation">
-      <a class="active" data-page="about">About</a>
-      <a data-page="research">Research</a>
-      <a data-page="projects">Projects</a>
-      <a data-page="publications">Publications</a>
-      <a data-page="contact">Contact</a>
-    </nav>
-
-    <div class="social-links">
-      <a href="https://scholar.google.com/citations?user=MzkdGtsAAAAJ&hl=en" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
-      <a href="https://www.linkedin.com/in/pravan-omprakash/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="mailto:pravanop@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-    </div>
-  </div>
+  <!-- Top Navigation Bar -->
+<header class="topbar" id="topbar">
+  <nav class="topnav" aria-label="Primary">
+    <a class="nav-link active" data-page="about" href="#about">About</a>
+<a class="nav-link" data-page="research" href="#research">Research</a>
+<a class="nav-link" data-page="projects" href="#projects">Projects</a>
+<a class="nav-link" data-page="publications" href="#publications">Publications</a>
+<a class="nav-link" data-page="contact" href="#contact">Contact</a>
+  </nav>
+</header>
 
   <!-- Main Content -->
   <div id="main-content">
@@ -125,7 +113,7 @@
   <!-- Hidden content -->
   <div class="expand-content">
     <p>
-      <b>Related tools & links:</b>
+      <b>Related links:</b>
     </p>
     <ul>
       <li><a href="https://arc.aiaa.org/doi/abs/10.2514/6.2022-2142" target="_blank">Deep Learning-Based Optimization of Piezoelectric Vibration Energy Harvesters</a></li>
@@ -147,7 +135,7 @@
   <!-- Hidden content -->
   <div class="expand-content">
     <p>
-      <b>Related tools & links:</b>
+      <b>Related links:</b>
     </p>
     <ul>
       <li><a href="https://doi.org/10.1016/j.scriptamat.2025.116840" target="_blank">Visualizing high dimensional spaces with SymPlex plots</a></li>
@@ -167,7 +155,7 @@
   <!-- Hidden content -->
   <div class="expand-content">
     <p>
-      <b>Related tools & links:</b>
+      <b>Related links:</b>
     </p>
     <ul>
       <li><a href="https://github.com/yourrepo/far_heaa" target="_blank">(Upcoming) Monte Carlo based model to analyse short range order in multinary alloys</a></li>
@@ -185,7 +173,7 @@
   <!-- Hidden content -->
   <div class="expand-content">
     <p>
-      <b>Related tools & links:</b>
+      <b>Related links:</b>
     </p>
     <ul>
       <li><a href="https://arxiv.org/pdf/2508.05345" target="_blank">Hole doping reduces the coercive field in Hafnia</a></li>
@@ -241,7 +229,7 @@
     <!-- Publication 1 -->
     <div class="pub-card" data-pub="pub1">
       <img src="assets/images/swamy.png" alt="Publication 1 cover" />
-      <h3>Swamy et al., 2025, Preprint</h3>
+      <h3>Swamy et al., 2025, Chemistry of Materials</h3>
     </div>
 
     <!-- Publication 2 -->
@@ -257,13 +245,13 @@
     </div>
     
      <div class="pub-card" data-pub="pub4">
-      <img src="assets/images/paper1.png" alt="Publication 1 cover" />
+      <img src="assets/images/jung.png" alt="Publication 1 cover" />
       <h3>Jung et al., 2025, Chemistry of Materials</h3>
     </div>
     
      <div class="pub-card" data-pub="pub6">
       <img src="assets/images/symplex.png" alt="Publication 1 cover" />
-      <h3>Cavin & Omprakash et al., 2025, Scripta Materalia</h3>
+      <h3>Cavin, Omprakash et al., 2025, Scripta Materalia</h3>
     </div>
     
      <div class="pub-card" data-pub="pub7">
@@ -277,22 +265,22 @@
     </div>
     
      <div class="pub-card" data-pub="pub9">
-<!--      <img src="assets/images/paper1.png" alt="Publication 1 cover" />-->
+      <img src="assets/images/avantika.png" alt="Publication 1 cover" />
       <h3>Vardhan et al., 2023, Bioelectronic Medicine</h3>
     </div>
     
      <div class="pub-card" data-pub="pub10">
       <img src="assets/images/authnet.png" alt="Publication 1 cover" />
-      <h3>Raghavendra & Omprakash et al., 2021, AAAI</h3>
+      <h3>Raghavendra, Omprakash et al., 2021, AAAI</h3>
     </div>
     
      <div class="pub-card" data-pub="pub13">
-<!--      <img src="assets/images/paper1.png" alt="Publication 1 cover" />-->
+      <img src="assets/images/review.png" alt="Publication 1 cover" />
       <h3>Omprakash et al., 2021, ECS Solid State and Tech</h3>
     </div>
     
     <div class="pub-card" data-pub="pub14">
-<!--      <img src="assets/images/perovksite.jpg" alt="Publication 1 cover" />-->
+      <img src="assets/images/perovksite.jpg" alt="Publication 1 cover" />
       <h3>Omprakash et al., 2021, Computational Materials Science</h3>
     </div>
   </div>
@@ -331,7 +319,20 @@
   </p>
 </section>
   </div>
-
+<!-- Bottom Contact Bar -->
+<footer class="bottombar" id="bottombar">
+  <div class="bottom-links">
+    <a href="https://scholar.google.com/citations?user=MzkdGtsAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
+      <i class="fa-solid fa-graduation-cap"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/pravan-omprakash/" target="_blank" aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="mailto:pravanop@gmail.com" aria-label="Email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+  </div>
+</footer>
   <script src="js/script.js"></script>
 <!-- Modal structure -->
 <div class="modal" id="pubModal">

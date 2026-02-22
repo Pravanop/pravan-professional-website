@@ -1,65 +1,82 @@
 document.addEventListener("DOMContentLoaded", () => {
   const typedName = document.getElementById('typed-name');
   const landing = document.getElementById('landing');
-  const main = document.getElementById('main-content');
-  const menuLinks = document.querySelector('.menu-links');
-  const socials = document.querySelector('.social-links');
-  const links = document.querySelectorAll('.menu-links a');
+
+  const navLinks = Array.from(document.querySelectorAll('.topnav .nav-link[data-page]'));
 
   const nameText = "Pravan Omprakash";
   let i = 0;
 
-  // Typing animation
+  function finishLanding() {
+    if (!landing) return;
+    if (document.body.classList.contains('landing-done')) return;
+    document.body.classList.add('landing-done');
+    landing.setAttribute('aria-hidden', 'true');
+    setTimeout(() => document.body.classList.add('landing-removed'), 520);
+  }
+
+  // Typing animation (then landing disappears)
   function type() {
+    if (!typedName) {
+      finishLanding();
+      return;
+    }
+
     if (i < nameText.length) {
       typedName.textContent += nameText.charAt(i);
       i++;
       setTimeout(type, 120);
     } else {
       typedName.style.border = 'none';
-      setTimeout(() => {
-        landing.classList.add('sidebar');
-        main.classList.add('show');
-        menuLinks.style.opacity = 1;
-        socials.style.opacity = 1;
-      }, 800);
+      setTimeout(finishLanding, 650);
     }
   }
+
+  // Ensure we start clean if user refreshes
+  if (typedName) typedName.textContent = "";
   type();
 
-  // Section switching
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      const targetId = link.dataset.page;
-      const next = document.getElementById(targetId);
-      const current = document.querySelector('#main-content section.active');
+  // Top nav: smooth scroll + active state
+  function setActive(id) {
+    navLinks.forEach(a => a.classList.toggle('active', a.dataset.page === id));
+  }
 
-      if (!next || next === current) return;
-
-      // Update link highlighting
-      links.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-
-      // Make new section visible in a pre-enter state
-      next.classList.add('pre-enter');
-
-      // Force browser to register this state (trigger reflow)
-      void next.offsetWidth;
-
-      // Start transition: new section slides up and fades in
-      next.classList.remove('pre-enter');
-      next.classList.add('active');
-
-      // Animate current section out
-      current.classList.add('fadeOut');
-      current.classList.remove('active');
-
-      // After animation, hide old section completely
-      setTimeout(() => {
-        current.classList.remove('fadeOut');
-      }, 500);
+  navLinks.forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.dataset.page;
+      const section = document.getElementById(id);
+      if (!section) return; // let default happen if href exists
+      e.preventDefault();
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActive(id);
+      history.replaceState(null, '', '#' + id);
     });
   });
+
+  const sections = navLinks
+    .map(a => document.getElementById(a.dataset.page))
+    .filter(Boolean);
+
+  function updateActiveOnScroll() {
+    const y = window.scrollY + 120; // offset for fixed topbar
+    let current = sections.length ? sections[0].id : 'about';
+    for (const s of sections) {
+      if (s.offsetTop <= y) current = s.id;
+    }
+    setActive(current);
+  }
+
+  window.addEventListener('scroll', updateActiveOnScroll, { passive: true });
+  window.addEventListener('load', updateActiveOnScroll);
+
+  // If page loads with a hash, scroll to it (after landing finishes)
+  if (window.location.hash) {
+    const id = window.location.hash.replace('#', '');
+    const section = document.getElementById(id);
+    if (section) {
+      setTimeout(() => section.scrollIntoView({ behavior: 'smooth', block: 'start' }), 800);
+    }
+  }
 });
 
 // --- Expand/collapse research cards ---
@@ -142,7 +159,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.body.style.overflow = "auto";
     }
   });
-  
+
 });
 
 
@@ -194,10 +211,10 @@ document.addEventListener("DOMContentLoaded", () => {
       code: "https://github.com/yourrepo/montecarlo",
       poster: "assets/posters/montecarlo_poster.png",
       presentations: [
-       
+
       ],
       publications: [
-       
+
       ]
     }
   };
@@ -313,4 +330,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = `mailto:youremail@domain.com?subject=${subject}&body=${body}`;
   });
 });
+
+
 
