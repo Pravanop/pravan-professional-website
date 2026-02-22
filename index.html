@@ -20,12 +20,14 @@
     <h1 id="typed-name"></h1>
 
     <!-- Mobile menu toggle (shown only on small screens) -->
-    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+    <!-- Simple mobile menu toggle (shown only on small screens) -->
+    <button class="mobile-menu-btn" id="mobile-menu-btn"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
       <i class="fa-solid fa-bars"></i>
+      <span class="mobile-menu-label">Menu</span>
     </button>
-
-    <!-- Mobile overlay (shown only on small screens when menu is open) -->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true"></div>
 
     <nav class="menu-links" id="mobile-menu" aria-label="Site navigation">
       <a class="active" data-page="about">About</a>

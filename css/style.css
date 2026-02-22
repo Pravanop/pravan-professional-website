@@ -629,3 +629,64 @@ section.leaving {
     opacity 0.5s cubic-bezier(0.55, 0.06, 0.68, 0.19),
     transform 0.5s cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
+
+/* -----------------------------
+   Mobile: 2-line name + simple dropdown menu
+   Desktop: 1-line name + normal menu
+   ----------------------------- */
+
+/* Desktop / laptop: keep the typed name on one line */
+#typed-name {
+  white-space: nowrap;
+}
+
+/* Hide the mobile menu button on desktop */
+.mobile-menu-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-menu-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  /* Allow typed name to break into 2 lines */
+  #typed-name {
+    white-space: pre-line;
+    line-height: 1.05;
+  }
+
+  /* Show the menu button */
+  .mobile-menu-btn {
+    display: inline-flex;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Collapse menu into dropdown on mobile */
+  #mobile-menu.menu-links {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  }
+
+  body.menu-open #mobile-menu.menu-links {
+    display: flex;
+  }
+}
