@@ -19,17 +19,25 @@
   <div id="landing">
     <h1 id="typed-name"></h1>
 
-    <div class="menu-links">
+    <!-- Mobile menu toggle (shown only on small screens) -->
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Mobile overlay (shown only on small screens when menu is open) -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true"></div>
+
+    <nav class="menu-links" id="mobile-menu" aria-label="Site navigation">
       <a class="active" data-page="about">About</a>
-	<a data-page="research">Research</a>
-	<a data-page="projects">Projects</a>
-	<a data-page="publications">Publications</a>
-	<a data-page="contact">Contact</a>
-    </div>
+      <a data-page="research">Research</a>
+      <a data-page="projects">Projects</a>
+      <a data-page="publications">Publications</a>
+      <a data-page="contact">Contact</a>
+    </nav>
 
     <div class="social-links">
       <a href="https://scholar.google.com/citations?user=MzkdGtsAAAAJ&hl=en" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/pravan-omprakash/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       <a href="mailto:pravanop@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
   </div>
@@ -58,7 +66,7 @@
       </div>
 
       <p class="letter">
-        I am a third-year PhD candidate in Materials Science at Washington University in St. Louis.  
+        I am a fourth-year PhD candidate in Materials Science at Washington University in St. Louis.
         My thesis revolves around exploring the interplay of disorder and order in complex materials — 
         from metallic alloys to polar semiconductors — using DFT, thermodynamics, and data science.  
         I develop computational methods, mainly in Python, that combine first-principles calculations 
