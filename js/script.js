@@ -169,9 +169,9 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "SymPlex Visualization Framework",
       desc: "A Python visualization suite for visualizing N-component spaces in 2D using polar projections...",
       code: "https://github.com/Materials-Modelling-Microscopy/SymPlex",
-      poster: "assets/posters/symplex_poster.png",
+      poster: "assets/posters/TMS26.pdf",
       presentations: [
-        { title: "High-Entropy Materials (SF03), MRS Fall '25", link: "https://drive.google.com/.../symplex_APS.pdf" }
+        { title: "High-Entropy Materials (SF03), MRS Fall '25", link: "https://docs.google.com/presentation/d/11Zqb78J-eyiZ3hmelV3CPdQs05d4wSxg/edit?usp=share_link&ouid=114349879006884093788&rtpof=true&sd=true" }
       ],
       publications: [
         { title: "SymPlex plots for visualizing properties in high-dimensional alloy spaces", link: "https://doi.org/10.1016/j.scriptamat.2025.116840" },
@@ -183,8 +183,8 @@ document.addEventListener("DOMContentLoaded", () => {
       code: "https://github.com/yourrepo/far_heaa",
       poster: "assets/posters/farheaa_poster.png",
       presentations: [
-        { title: "Materials at High Temperatures—Fabrication, Characterization and Performance (SF09), MRS Fall '25", link: "https://drive.google.com/.../farheaa_TMS.pdf" },
-        { title: "Computational Thermodynamics and Kinetics, TMS Fall '26", link: "https://drive.google.com/.../farheaa_TMS.pdf" }
+        { title: "Materials at High Temperatures—Fabrication, Characterization and Performance (SF09), MRS Fall '25", link: "https://docs.google.com/presentation/d/1L_SikiVE1xPwfhKcIKfxtTWeDsOTMSSX/edit?usp=share_link&ouid=114349879006884093788&rtpof=true&sd=true" },
+        { title: "Computational Thermodynamics and Kinetics, TMS Fall '26", link: "https://docs.google.com/presentation/d/1Emq1mJyPzTB2HnLOI5ZSqVhIeYTVY6MA/edit?usp=share_link&ouid=114349879006884093788&rtpof=true&sd=true" }
       ],
       publications: [
         { title: "TBD", link: "https://doi.org/10.1016/j.commatsci.2025.XXXX" },
@@ -195,11 +195,11 @@ document.addEventListener("DOMContentLoaded", () => {
     proj3: {
       title: "Phase Field simulations and Spinodal Decomposition in multinary alloys",
       desc: "An open-source Python based modular library for analyzing spiondal decomposition of solid solutions in HEAs, supplemented with phase field simulations.[Update coming soon].",
-      code: "https://github.com/yourrepo/far_heaa",
+      code: "TBD",
       poster: "assets/posters/farheaa_poster.png",
       presentations: [
-        { title: "Materials at High Temperatures—Fabrication, Characterization and Performance (SF09), MRS Fall '25", link: "https://drive.google.com/.../farheaa_TMS.pdf" },
-        { title: "Computational Thermodynamics and Kinetics, TMS Fall '26", link: "https://drive.google.com/.../farheaa_TMS.pdf" }
+        { title: "TBD", link: "https://drive.google.com/.../farheaa_TMS.pdf" },
+        { title: "TBD", link: "https://drive.google.com/.../farheaa_TMS.pdf" }
       ],
       publications: [
         { title: "TBD", link: "https://doi.org/10.1016/j.commatsci.2025.XXXX" }

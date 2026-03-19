@@ -84,9 +84,9 @@
     "title": "Design Rules, Discovery of Face-Sharing Hexagonal Perovskites",
     "authors": "MJ Swamynadhan, Gwan Yeong Jung, Pravan Omprakash, Rohan Mishra",
     "year": 2025,
-    "venue": "arXiv preprint arXiv:2508.09088",
+    "venue": "Chemistry of Materials",
     "abstract": "Hexagonal perovskites with face-sharing octahedral connectivity are an underexplored class of materials. We propose quantitative design principles for stabilizing face-sharing ABX3 hexagonal perovskites based on a comparative analysis of oxides, sulfides. By mapping structural preferences across a phase-space defined by an electronegativity-corrected tolerance factor, the Shannon radius of the A-site cations, we identify distinct thresholds that separate hexagonal phases from competing cubic polymorphs having corner-sharing octahedral connectivity. Our analysis reveals that sulfides differ significantly from oxides due to the increased covalency of the transition metal-sulfur bonds, which enables broader compositional flexibility. Applying these principles, we predict a set of thermodynamically formable ABO3, ABS3 compounds that are likely to adopt face-sharing octahedral connectivity. These findings establish a predictive framework for designing hexagonal perovskites, highlighting sulfides as promising candidates for obtaining quasi-one-dimensional materials having transition-metal cations for novel ferroic phenomena.",
-    "scholar": "https://arxiv.org/abs/2508.09088",
+    "scholar": "https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.5c02171",
     "doi": ""
   },
   "pub2": {
@@ -120,7 +120,7 @@
     "title": "Mic-hackathon 2024: Hackathon on Machine Learning for Electron, Scanning Probe Microscopy",
     "authors": "Utkarsh Pratiush, Austin Houston, Kamyar Barakati, Aditya Raghavan, Dasol Yoon, Harikrishnan KP, Zhaslan Baraissov, Desheng Ma, Samuel S Welborn, Mikolaj Jakowski, Shawn-Patrick Barhorst, Alexander J Pattison, Panayotis Manganaris, Sita Sirisha Madugula, Sai Venkata Gayathri Ayyagari, Vishal Kennedy, Ralph Bulanadi, Michelle Wang, Kieran J Pang, Ian Addison-Smith, Willy Menacho, Horacio V Guzman, Alexander Kiefer, Nicholas Furth, Nikola L Kolev, Mikhail Petrov, Viktoriia Liu, Sergey Ilyev, Srikar Rairao, Tommaso Rodani, Ivan Pinto-Huguet, Xuli Chen, Josep Cruañes, Marta Torrens, Jovan Pomar, Fanzhi Su, Pawan Vedanti, Zhiheng Lyu, Xingzhi Wang, Lehan Yao, Amir Taqieddin, Forrest Laskowski, Xiangyu Yin, Yu-Tsun Shao, Benjamin Fein-Ashley, Yi Jiang, Vineet Kumar, Himanshu Mishra, Yogesh Paul, Adib Bazgir, Yuwen Zhang, Pravan Omprakash, Jian Huang, Eric Montufar-Morales, Vivek Chawla, Harshit Sethi, Jie Huang, Lauri Kurki, Grace Guinan, Addison Salvador, Arman Ter-Petrosyan, Madeline Van Winkle, Steven R Spurgeon, Ganesh Narasimha, Zijie Wu, Richard Liu, Yongtao Liu, Boris Slautin, Andrew R Lupini, Rama Vasudevan, Gerd Duscher, Sergei V Kalinin",
     "year": 2025,
-    "venue": "arXiv preprint arXiv:2506.08423",
+    "venue": "Machine Learning: Science and Technology",
     "abstract": "Microscopy is a primary source of information on materials structure, functionality at nanometer, atomic scales. The data generated is often well-structured, enriched with metadata, sample histories, though not always consistent in detail or format. The adoption of Data Management Plans (DMPs) by major funding agencies promotes preservation, access. However, deriving insights remains difficult due to the lack of standardized code ecosystems, benchmarks,, integration strategies. As a result, data usage is inefficient, analysis time is extensive. In addition to post-acquisition analysis, new APIs from major microscope manufacturers enable real-time, ML-based analytics for automated decision-making, ML-agent-controlled microscope operation. Yet, a gap remains between the ML, microscopy communities, limiting the impact of these methods on physics, materials discovery,, optimization. Hackathons help bridge this divide by fostering collaboration between ML researchers, microscopy experts. They encourage the development of novel solutions that apply ML to microscopy, while preparing a future workforce for instrumentation, materials science,, applied ML. This hackathon produced benchmark datasets, digital twins of microscopes to support community growth, standardized workflows. All related code is available at GitHub: https://github.com/KalininGroup/Mic-hackathon-2024-codes-publication/tree/1.0.0.1",
     "scholar": "https://arxiv.org/abs/2506.08423",
     "doi": ""
@@ -129,18 +129,18 @@
     "title": "SymPlex Plots for Visualizing Properties in High-Dimensional Alloy Spaces",
     "authors": "John Cavin, Pravan Omprakash, Adrien Couet, Rohan Mishra",
     "year": 2025,
-    "venue": "arXiv preprint arXiv:2504.03973",
+    "venue": "Scripta Materalia",
     "abstract": "Conventional visualization tools such as phase diagrams, convex hulls are ill-suited to visualize multiple principal element alloys (MPEAs) due to their large compositional space that cannot be easily projected onto two dimensions. Here, SymPlex plots are introduced to enable the visualization of various properties along special paths in high-dimensional phase spaces of MPEAs. These are polar heatmaps that plot properties along high-symmetry paths radiating from the parent equimolar MPEA to a set of chosen lower-order compositions. SymPlex plots capture the changes in the energy landscape along the special paths, help visualize the effect of addition or substitution of components on the alloy stability, which can be especially useful to assess processing pathways for additive manufacturing. Thus, SymPlex plots can help guide design of MPEAs by showing connections between compositions, their properties in the high-dimensional phase space with more information concentrated near the equimolar region.",
-    "scholar": "https://arxiv.org/abs/2504.03973",
+    "scholar": "https://www.sciencedirect.com/science/article/abs/pii/S1359646225003033",
     "doi": ""
   },
   "pub16": {
     "title": "Robust Deep Learning Models for Inverse Design of Complex Mechanical Metamaterial Structures",
     "authors": "Pravan Omprakash, Neelam Mishra, Ayan Haldar, Niraj Jha, Jyotiraditya Bose, Arkadipta Chaterjee, S Swayamjyoti, Kisor Kumar Sahu",
     "year": 2022,
-    "venue": "",
+    "venue": "World Congress of Computational Materials",
     "abstract": "",
     "scholar": "",
-    "doi": ""
+    "doi": "https://docs.google.com/presentation/d/1itPglrh5wROG1Ygzr-Al2uyNpwcucqFQDSwOkDLeA0w/edit?usp=share_link"
   }
 }
