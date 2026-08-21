@@ -1,335 +1,198 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const typedName = document.getElementById('typed-name');
-  const landing = document.getElementById('landing');
+  const header = document.getElementById("site-header");
+  const menuButton = document.getElementById("menu-toggle");
+  const primaryNav = document.getElementById("primary-nav");
+  const navLinks = [...document.querySelectorAll(".nav-link")];
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const navLinks = Array.from(document.querySelectorAll('.topnav .nav-link[data-page]'));
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-  const nameText = "Pravan Omprakash";
-  let i = 0;
+  const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 24);
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
 
-  function finishLanding() {
-    if (!landing) return;
-    if (document.body.classList.contains('landing-done')) return;
-    document.body.classList.add('landing-done');
-    landing.setAttribute('aria-hidden', 'true');
-    setTimeout(() => document.body.classList.add('landing-removed'), 520);
-  }
-
-  // Typing animation (then landing disappears)
-  function type() {
-    if (!typedName) {
-      finishLanding();
-      return;
-    }
-
-    if (i < nameText.length) {
-      typedName.textContent += nameText.charAt(i);
-      i++;
-      setTimeout(type, 120);
-    } else {
-      typedName.style.border = 'none';
-      setTimeout(finishLanding, 650);
-    }
-  }
-
-  // Ensure we start clean if user refreshes
-  if (typedName) typedName.textContent = "";
-  type();
-
-  // Top nav: smooth scroll + active state
-  function setActive(id) {
-    navLinks.forEach(a => a.classList.toggle('active', a.dataset.page === id));
-  }
-
-  navLinks.forEach(a => {
-    a.addEventListener('click', (e) => {
-      const id = a.dataset.page;
-      const section = document.getElementById(id);
-      if (!section) return; // let default happen if href exists
-      e.preventDefault();
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setActive(id);
-      history.replaceState(null, '', '#' + id);
-    });
+  menuButton.addEventListener("click", () => {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", String(!isOpen));
+    primaryNav.classList.toggle("open", !isOpen);
   });
 
-  const sections = navLinks
-    .map(a => document.getElementById(a.dataset.page))
+  navLinks.forEach(link => link.addEventListener("click", () => {
+    menuButton.setAttribute("aria-expanded", "false");
+    primaryNav.classList.remove("open");
+  }));
+
+  const observedSections = ["about", "research", "projects", "publications", "conferences", "contact"]
+    .map(id => document.getElementById(id))
     .filter(Boolean);
 
-  function updateActiveOnScroll() {
-    const y = window.scrollY + 120; // offset for fixed topbar
-    let current = sections.length ? sections[0].id : 'about';
-    for (const s of sections) {
-      if (s.offsetTop <= y) current = s.id;
-    }
-    setActive(current);
+  const sectionObserver = new IntersectionObserver(entries => {
+    const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+    navLinks.forEach(link => link.classList.toggle("active", link.hash === `#${visible.target.id}`));
+  }, { rootMargin: "-25% 0px -60%", threshold: [0, .2, .5] });
+  observedSections.forEach(section => sectionObserver.observe(section));
+
+  if (reduceMotion) {
+    document.querySelectorAll(".reveal").forEach(element => element.classList.add("visible"));
+  } else {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .08, rootMargin: "0px 0px -35px" });
+    document.querySelectorAll(".reveal").forEach(element => revealObserver.observe(element));
   }
 
-  window.addEventListener('scroll', updateActiveOnScroll, { passive: true });
-  window.addEventListener('load', updateActiveOnScroll);
+  const modals = [...document.querySelectorAll(".modal")];
+  let returnFocus = null;
 
-  // If page loads with a hash, scroll to it (after landing finishes)
-  if (window.location.hash) {
-    const id = window.location.hash.replace('#', '');
-    const section = document.getElementById(id);
-    if (section) {
-      setTimeout(() => section.scrollIntoView({ behavior: 'smooth', block: 'start' }), 800);
-    }
-  }
-});
-
-// --- Expand/collapse research cards ---
-document.addEventListener("click", (e) => {
-  const card = e.target.closest(".expandable");
-  if (!card) return;
-
-  // Toggle only this card
-  card.classList.toggle("active");
-
-  // Optionally collapse others at the same time:
-  // document.querySelectorAll(".expandable").forEach(c => {
-  //   if (c !== card) c.classList.remove("active");
-  // });
-});
-document.addEventListener("DOMContentLoaded", async () => {
-  // === PUBLICATIONS MODAL ===
-
-  const modal = document.getElementById("pubModal");
-  const modalTitle = document.getElementById("modal-title");
-  const modalAuthors = document.getElementById("modal-authors");
-  const modalAbstract = document.getElementById("modal-abstract");
-  const closeBtn = document.querySelector(".close-btn");
-  const scholarLink = document.getElementById("modal-scholar");
-  const doiLink = document.getElementById("modal-doi");
-
-  // ---- Load publication data dynamically ----
-  let pubData = {};
-  try {
-    const response = await fetch("assets/data/publications.json");
-    if (!response.ok) throw new Error("Failed to load JSON file");
-    pubData = await response.json();
-    console.log(`Loaded ${Object.keys(pubData).length} publications`);
-  } catch (err) {
-    console.error("Error loading publication data:", err);
+  function openModal(modal, trigger) {
+    returnFocus = trigger;
+    modal.hidden = false;
+    document.body.classList.add("modal-open");
+    requestAnimationFrame(() => modal.querySelector(".modal-close")?.focus());
   }
 
-  // ---- Bind event listeners to each card ----
-  document.querySelectorAll(".pub-card").forEach(card => {
-    card.addEventListener("click", () => {
-      const pub = pubData[card.dataset.pub];
-      if (!pub) {
-        console.warn(`No data found for ${card.dataset.pub}`);
-        return;
-      }
+  function closeModal(modal) {
+    modal.hidden = true;
+    document.body.classList.remove("modal-open");
+    returnFocus?.focus();
+    returnFocus = null;
+  }
 
-      // Populate modal with publication info
-      modalTitle.textContent = pub.title || "Untitled";
-      modalAuthors.textContent = pub.authors || "";
-      // Limit abstract length
-	  const maxLen = 800;
-	  const abstract = pub.abstract || "No abstract available.";
-	  const truncated = abstract.slice(0, maxLen).trim() + "...";
-
-// add inline scholar link with graduation-cap icon
-	  modalAbstract.innerHTML = `
-  	${truncated}
-  	<a href="${pub.scholar}" target="_blank" class="inline-link">
-    <i class="fa-solid fa-graduation-cap"></i>
-  	</a>
-`;
-//       scholarLink.href = pub.scholar || "#";
-      doiLink.href = pub.doi || "#";
-	  scholarLink.style.display = "none";
-      doiLink.style.display = "inline";
-      modal.style.display = "flex";
-      document.body.style.overflow = "visible"; // lock scroll
-    });
+  modals.forEach(modal => {
+    modal.querySelectorAll("[data-close-modal]").forEach(control => control.addEventListener("click", () => closeModal(modal)));
   });
 
-  // ---- Close modal behavior ----
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
-  });
-
-  modal.addEventListener("click", e => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-      document.body.style.overflow = "auto";
+  document.addEventListener("keydown", event => {
+    const open = modals.find(modal => !modal.hidden);
+    if (!open) return;
+    if (event.key === "Escape") closeModal(open);
+    if (event.key === "Tab") {
+      const focusable = [...open.querySelectorAll("a[href], button:not([disabled])")];
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     }
   });
 
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const projData = {
+  const projectData = {
     proj1: {
       title: "SymPlex Visualization Framework",
-      desc: "A Python visualization suite for visualizing N-component spaces in 2D using polar projections...",
-      code: "https://github.com/Materials-Modelling-Microscopy/SymPlex",
-      poster: "assets/posters/TMS26.pdf",
-      presentations: [
-        { title: "High-Entropy Materials (SF03), MRS Fall '25", link: "https://docs.google.com/presentation/d/11Zqb78J-eyiZ3hmelV3CPdQs05d4wSxg/edit?usp=share_link&ouid=114349879006884093788&rtpof=true&sd=true" }
+      description: "A Python visualization framework for projecting N-component composition spaces into intuitive two-dimensional polar maps. SymPlex concentrates information around equimolar compositions while preserving meaningful pathways to lower-order alloys.",
+      links: [
+        { label: "View code", url: "https://github.com/Materials-Modelling-Microscopy/Symplex", primary: true },
+        { label: "Read paper", url: "https://doi.org/10.1016/j.scriptamat.2025.116840" },
+        { label: "View poster", url: "assets/posters/TMS26.pdf" }
       ],
-      publications: [
-        { title: "SymPlex plots for visualizing properties in high-dimensional alloy spaces", link: "https://doi.org/10.1016/j.scriptamat.2025.116840" },
-      ]
+      related: ["Scripta Materialia, 2025", "Presented at MRS Fall 2025"]
     },
     proj2: {
-      title: "Fast and Robust High Entropy Alloy Analysis",
-      desc: "An open-source Python based modular library for analyzing stability of solid solutions and precipitates in alloys. A workflow for high-throughput analyse to accelerate alloy design.",
-      code: "https://github.com/yourrepo/far_heaa",
-      poster: "assets/posters/farheaa_poster.png",
-      presentations: [
-        { title: "Materials at High Temperatures—Fabrication, Characterization and Performance (SF09), MRS Fall '25", link: "https://docs.google.com/presentation/d/1L_SikiVE1xPwfhKcIKfxtTWeDsOTMSSX/edit?usp=share_link&ouid=114349879006884093788&rtpof=true&sd=true" },
-        { title: "Computational Thermodynamics and Kinetics, TMS Fall '26", link: "https://docs.google.com/presentation/d/1Emq1mJyPzTB2HnLOI5ZSqVhIeYTVY6MA/edit?usp=share_link&ouid=114349879006884093788&rtpof=true&sd=true" }
+      title: "Alloy Thermodynamics Toolkit",
+      description: "A modular computational workflow for rapidly evaluating solid-solution and precipitate stability in high-entropy alloys. It combines first-principles inputs, classical thermodynamic models, and interpretable visual outputs.",
+      links: [
+        { label: "View poster", url: "assets/posters/farheaa_poster.png", primary: true }
       ],
-      publications: [
-        { title: "TBD", link: "https://doi.org/10.1016/j.commatsci.2025.XXXX" },
-        { title: "TBD", link: "https://doi.org/10.1016/j.commatsci.2025.XXXX" },
-        { title: "TBD", link: "https://doi.org/10.1016/j.commatsci.2025.XXXX" },
-      ]
+      related: ["Active research project", "Open-source release in preparation"]
     },
     proj3: {
-      title: "Phase Field simulations and Spinodal Decomposition in multinary alloys",
-      desc: "An open-source Python based modular library for analyzing spiondal decomposition of solid solutions in HEAs, supplemented with phase field simulations.[Update coming soon].",
-      code: "TBD",
-      poster: "assets/posters/farheaa_poster.png",
-      presentations: [
-        { title: "TBD", link: "https://drive.google.com/.../farheaa_TMS.pdf" },
-        { title: "TBD", link: "https://drive.google.com/.../farheaa_TMS.pdf" }
-      ],
-      publications: [
-        { title: "TBD", link: "https://doi.org/10.1016/j.commatsci.2025.XXXX" }
-      ]
-    },
-    proj4: {
-      title: "Monte Carlo Lattice Model",
-      desc: "Python based custom simulation framework to study segregation and order–disorder transitions in high entropy alloys",
-      code: "https://github.com/yourrepo/montecarlo",
-      poster: "assets/posters/montecarlo_poster.png",
-      presentations: [
-
-      ],
-      publications: [
-
-      ]
+      title: "Spinodal Decomposition in Complex Materials",
+      description: "A phase-field simulation framework for exploring how free-energy landscapes, elastic effects, and composition influence phase-segregated microstructures in multicomponent materials.",
+      links: [],
+      related: ["Active research project", "Code and results in preparation"]
     }
   };
 
-  // Cache all elements used below
-  const projModal    = document.getElementById("projModal");
-  const presList     = document.getElementById("presentation-list");
-  const pubList      = document.getElementById("publication-list");
-  const lightbox     = document.getElementById("poster-lightbox");
-  const lightboxImg  = document.getElementById("poster-image");
-  const btnCode      = document.getElementById("proj-code");
-  const btnPoster    = document.getElementById("proj-poster");
-  const btnPres      = document.getElementById("proj-presentation");
-  const btnPubs      = document.getElementById("proj-publication");
-  const titleEl      = document.getElementById("proj-title");
-  const descEl       = document.getElementById("proj-desc");
+  const projectModal = document.getElementById("projModal");
+  const projectTitle = document.getElementById("proj-title");
+  const projectDescription = document.getElementById("proj-desc");
+  const projectLinks = document.getElementById("proj-links");
+  const projectRelated = document.getElementById("proj-related");
 
-  // Basic sanity checks to avoid silent failures
-  if (!projModal || !presList || !pubList || !lightbox || !lightboxImg || !btnCode || !btnPoster || !btnPres || !btnPubs || !titleEl || !descEl) {
-    console.error("Projects modal: one or more required elements are missing. Check IDs in your HTML.");
-    return;
-  }
+  document.querySelectorAll(".project-card").forEach(card => {
+    const trigger = card.querySelector(".card-hit");
+    trigger.addEventListener("click", () => {
+      const project = projectData[card.dataset.proj];
+      if (!project) return;
+      projectTitle.textContent = project.title;
+      projectDescription.textContent = project.description;
+      projectLinks.replaceChildren();
+      project.related = project.related || [];
 
-  document.querySelectorAll(".proj-card").forEach(card => {
-    card.addEventListener("click", () => {
-      const key = card.dataset.proj;
-      const proj = projData[key];
-      if (!proj) {
-        console.warn("No project data for:", key);
-        return;
+      project.links.forEach(link => {
+        const anchor = document.createElement("a");
+        anchor.className = `button ${link.primary ? "button-primary" : "button-secondary"}`;
+        anchor.href = link.url;
+        anchor.target = "_blank";
+        anchor.rel = "noopener";
+        anchor.innerHTML = `${link.label} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>`;
+        projectLinks.append(anchor);
+      });
+
+      projectRelated.replaceChildren();
+      if (project.related.length) {
+        const label = document.createElement("p");
+        label.textContent = "Project status";
+        projectRelated.append(label);
+        project.related.forEach(item => {
+          const line = document.createElement("span");
+          line.textContent = item;
+          line.style.display = "block";
+          line.style.color = "var(--muted)";
+          line.style.marginTop = "8px";
+          projectRelated.append(line);
+        });
       }
-
-      // Fill static fields
-      titleEl.textContent = proj.title;
-      descEl.textContent  = proj.desc;
-      btnCode.href        = proj.code || "#";
-
-      // Reset lists and lightbox each open
-      presList.style.display = "none";
-      presList.innerHTML = "";
-      pubList.style.display  = "none";
-      pubList.innerHTML = "";
-      lightbox.style.display = "none";
-      lightboxImg.src = "";
-
-      // Rebind actions (onclick replaces any previous)
-      btnPoster.onclick = e => {
-        e.preventDefault();
-        if (!proj.poster) return;
-        lightboxImg.src = proj.poster;
-        lightbox.style.display = "flex";
-      };
-
-      btnPres.onclick = e => {
-        e.preventDefault();
-        const items = Array.isArray(proj.presentations) ? proj.presentations : [];
-        presList.innerHTML = items.length
-          ? items.map(p => `<li><a href="${p.link}" target="_blank" rel="noopener">${p.title}</a></li>`).join("")
-          : `<li><em>No talks listed yet.</em></li>`;
-        presList.style.display = (presList.style.display === "none") ? "block" : "none";
-      };
-
-      btnPubs.onclick = e => {
-        e.preventDefault();
-        const items = Array.isArray(proj.publications) ? proj.publications : [];
-        pubList.innerHTML = items.length
-          ? items.map(p => `<li><a href="${p.link}" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> ${p.title}</a></li>`).join("")
-          : `<li><em>No publications linked yet.</em></li>`;
-        pubList.style.display = (pubList.style.display === "none") ? "block" : "none";
-      };
-
-      // Show modal
-      projModal.style.display = "flex";
-      document.body.style.overflow = "hidden";
+      openModal(projectModal, trigger);
     });
   });
 
-  // Close the lightbox on click (if you haven't already elsewhere)
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
-    lightboxImg.src = "";
+  const publicationModal = document.getElementById("pubModal");
+  const modalTitle = document.getElementById("modal-title");
+  const modalAuthors = document.getElementById("modal-authors");
+  const modalAbstract = document.getElementById("modal-abstract");
+  const modalScholar = document.getElementById("modal-scholar");
+  let publicationData = {};
+
+  fetch("assets/data/publications.json")
+    .then(response => {
+      if (!response.ok) throw new Error("Publication data could not be loaded.");
+      return response.json();
+    })
+    .then(data => { publicationData = data; })
+    .catch(error => console.error(error));
+
+  document.querySelectorAll("[data-pub]").forEach(card => {
+    const trigger = card.matches("button") ? card : card.querySelector(".card-hit");
+    trigger.addEventListener("click", () => {
+      const publication = publicationData[card.dataset.pub];
+      if (!publication) return;
+      modalTitle.textContent = publication.title || "Selected publication";
+      modalAuthors.textContent = [publication.authors, publication.venue, publication.year].filter(Boolean).join(" · ");
+      const abstract = publication.abstract || "Abstract not available here. Follow the publication link for the complete paper.";
+      modalAbstract.textContent = abstract.length > 950 ? `${abstract.slice(0, 947).trim()}…` : abstract;
+      const destination = publication.scholar || publication.doi;
+      modalScholar.hidden = !destination;
+      if (destination) modalScholar.href = destination;
+      openModal(publicationModal, trigger);
+    });
   });
-  // === Close project modal ===
-const closeProjBtn = document.querySelector(".proj-close");
-if (closeProjBtn) {
-  closeProjBtn.addEventListener("click", () => {
-    projModal.style.display = "none";
-    document.body.style.overflow = "auto";
-  });
-}
 
-// Optional: close when clicking outside the modal content
-projModal.addEventListener("click", e => {
-  if (e.target === projModal) {
-    projModal.style.display = "none";
-    document.body.style.overflow = "auto";
-  }
-});
-});
-// --- Contact form handler ---
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form");
-  if (!form) return;
-
-  form.addEventListener("submit", e => {
-    e.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    const subject = encodeURIComponent(`Message from ${name}`);
-    const body = encodeURIComponent(`${message}\n\nFrom: ${name} (${email})`);
-    window.location.href = `mailto:youremail@domain.com?subject=${subject}&body=${body}`;
+  const contactForm = document.getElementById("contact-form");
+  contactForm.addEventListener("submit", event => {
+    event.preventDefault();
+    const formData = new FormData(contactForm);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+    const subject = encodeURIComponent(`Website inquiry from ${name}`);
+    const body = encodeURIComponent(`${message}\n\nFrom: ${name}\nEmail: ${email}`);
+    window.location.href = `mailto:o.pravan@wustl.edu?subject=${subject}&body=${body}`;
   });
 });
-
-
-
