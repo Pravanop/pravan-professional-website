@@ -1,4 +1,13 @@
 {
+  "pub17": {
+    "title": "First-principles-based Prediction of Phase Fields: Part I. Binary and Ternary Refractory Alloys",
+    "authors": "Pravan Omprakash, Nicholas Crnkovich, John Cavin, Nathan Curtis, Adrien Couet, Rohan Mishra",
+    "year": 2026,
+    "venue": "arXiv preprint arXiv:2609.06627",
+    "abstract": "A scalable first-principles framework predicts temperature-composition phase diagrams for refractory alloys by combining DFT mixing enthalpies with sub-regular solution models. The study predicts 36 binary and 86 ternary systems, benchmarks 51 phase diagrams against experiment and CALPHAD, and makes the results available through the RAPTor web interface.",
+    "scholar": "https://arxiv.org/abs/2609.06627",
+    "doi": "https://doi.org/10.48550/arXiv.2609.06627"
+  },
   "pub14": {
     "title": "Graph Representational Learning for bandgap prediction in varied perovskite crystals",
     "authors": "Pravan Omprakash, Bharadwaj M, Romit Srivastava, Ankit Sandeep, Viswesh P, Devadas Bhat Panemangalore",
@@ -63,10 +72,10 @@
     "doi": ""
   },
   "pub8": {
-    "title": "Ferroelectricity in Hafnia: The Origin of Nanoscale Stabilization",
-    "authors": "Xin Li, Guodong Ren, Haidong Lu, Kartik Samanta, Amit Kumar Shah, Pravan Omprakash, Yu Yun, Pratyush Buragohain, Huibo Cao, Jordan A Hachtel, Andrew R Lupini, Miaofang Chi, Evgeny Y Tsymbal, Alexei Gruverman, Rohan Mishra, Xiaoshan Xu",
-    "year": 2024,
-    "venue": "arXiv preprint arXiv:2408.01830",
+    "title": "Antiferroelectric Hafnia Down to the 2D Limit",
+    "authors": "Xin Li, Guodong Ren, Haidong Lu, Kartik Samanta, Amit Kumar Shah, Kai Huang, Pravan Omprakash, Yu Yun, Pratyush Buragohain, Huibo Cao, Yan Wu, Jordan A. Hachtel, Andrew R. Lupini, Miaofang Chi, Juan Carlos Idrobo, Evgeny Y. Tsymbal, Alexei Gruverman, Rohan Mishra, Xiaoshan Xu",
+    "year": 2026,
+    "venue": "Science (accepted)",
     "abstract": "The discovery of ferroelectricity in hafnia-based materials have boosted the potential of incorporating ferroelectrics in advanced electronics, thanks to their compatibility with silicon technology. However, comprehending why these materials defy the common trend of reduced ferroelectric ordering at the nanoscale,, the mechanism that stabilizes the ferroelectric phase (absent in hafnia phase diagram) presents significant challenges to traditional knowledge of ferroelectricity. In this work, we show that the formation of the orthorhombic ferroelectric phase (o-FE, space group Pca21) of the single-crystalline epitaxial films of 10% La-doped HfO2 (LHO) on (111)-oriented yttria stabilized zirconia (YSZ) relies on the stability of the high-pressure orthorhombic antiferroelectric phase (o-AFE, space group Pbca). Our detailed structural characterizations demonstrate that as-grown LHO films represent largely the o-AFE phase being thermodynamically stabilized by the compressive strain. Our Kelvin probe force microscopy studies show, under mechanical poling, the o-AFE phase is converted to the o-FE phase which remains stable under ambient conditions. We find that the orthorhombic phase stability is enhanced in thinner films down to one-unit-cell thickness, a trend that is unknown in any other ferroelectric films. This is due to the vanishing depolarization field of the o-AFE phase, the isomorphic LHO/YSZ interface, supporting strain-enhanced ferroelectricity in the ultrathin films. This results in an unprecedented increase of the Curie temperature up to 850 {\\deg}C, the highest reported for sub-nanometer-thick ferroelectrics. Overall, our findings opens …",
     "scholar": "https://arxiv.org/abs/2408.01830",
     "doi": ""
@@ -83,7 +92,7 @@
   "pub1": {
     "title": "Design Rules, Discovery of Face-Sharing Hexagonal Perovskites",
     "authors": "MJ Swamynadhan, Gwan Yeong Jung, Pravan Omprakash, Rohan Mishra",
-    "year": 2025,
+    "year": 2026,
     "venue": "Chemistry of Materials",
     "abstract": "Hexagonal perovskites with face-sharing octahedral connectivity are an underexplored class of materials. We propose quantitative design principles for stabilizing face-sharing ABX3 hexagonal perovskites based on a comparative analysis of oxides, sulfides. By mapping structural preferences across a phase-space defined by an electronegativity-corrected tolerance factor, the Shannon radius of the A-site cations, we identify distinct thresholds that separate hexagonal phases from competing cubic polymorphs having corner-sharing octahedral connectivity. Our analysis reveals that sulfides differ significantly from oxides due to the increased covalency of the transition metal-sulfur bonds, which enables broader compositional flexibility. Applying these principles, we predict a set of thermodynamically formable ABO3, ABS3 compounds that are likely to adopt face-sharing octahedral connectivity. These findings establish a predictive framework for designing hexagonal perovskites, highlighting sulfides as promising candidates for obtaining quasi-one-dimensional materials having transition-metal cations for novel ferroic phenomena.",
     "scholar": "https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.5c02171",
@@ -92,18 +101,18 @@
   "pub2": {
     "title": "Hole-doping reduces the coercive field in ferroelectric hafnia",
     "authors": "Pravan Omprakash, Gwan Yeong Jung, Guodong Ren, Rohan Mishra",
-    "year": 2025,
-    "venue": "arXiv preprint arXiv:2508.05345",
+    "year": 2026,
+    "venue": "Physical Review Materials",
     "abstract": "Ferroelectric hafnia holds promise for next-generation memory, logic applications because of its CMOS compatibility. However, the high coercive field required for polarization switching in hafnia remains a critical challenge for efficient device operations. Using first-principles calculations, phenomenological modeling, we predict that hole doping can reduce the coercive field from 8 MV/cm in undoped hafnia to 6 MV/cm in hafnia doped with 0.2 holes per formula unit (f.u.). In the absence of doping, the reversal of polarization of the Pca21 phase is preferred through the non-polar, tetragonal P42/nmc phase. This switching pathway involves the coupling of three hard distortion modes that render undoped hafnia as an improper ferroelectric. The overall energy barrier through this pathway remains unchanged (80 meV/f.u.) upon hole doping. However, the introduction of holes hardens the polar distortion mode that connects the polar Pca21 phase to the non-polar, orthorhombic Pbcm phase,, reduces the energy barrier from 180 meV/f.u. in undoped hafnia to 80 meV/f.u. at 0.2 holes/f.u.. Overall, hole doping makes the latter switching pathway through the Pbcm phase competitive,, renders hafnia as a proper ferroelectric with a lower coercive field.",
-    "scholar": "https://arxiv.org/abs/2508.05345",
-    "doi": ""
+    "scholar": "https://doi.org/10.1103/zhk4-flgd",
+    "doi": "https://doi.org/10.1103/zhk4-flgd"
   },
   "pub3": {
-    "title": "Atomic-scale confinement of strongly charged 180 degree domain wall pairs in ZrO2",
+    "title": "Sub-nm2 ferroelectric domains via charged 180 degree walls in ZrO2",
     "authors": "Nashrah Afroze, Hamoon Fahrvandi, Guodong Ren, Pawan Kumar, Christopher Nelson, Sarah Lombardo, Mengkun Tian, Ping-Che Lee, Jiayi Chen, Manifa Noor, Kisung Chae, Sanghyun Kang, Prasanna Venkat Ravindran, Matthew Bergschneider, Gwan Yeong Jung, Pravan Omprakash, Gardy K Ligonde, Nujhat Tasneem, Dina Triyoso, Steven Consiglio, Kanda Tapily, Robert Clark, Gert Leusink, Jayakanth Ravichandran, Shimeng Yu, Andrew Lupini, Andrew Kummel, Kyeongjae Cho, Duk-Hyun Choe, Nazanin Bassiri-Gharb, Josh Kacher, Rohan Mishra, Jun Hee Lee, Asif Khan",
-    "year": 2025,
-    "venue": "arXiv preprint arXiv:2507.18920",
-    "abstract": "Self organized polar textures can occur in ferroelectric materials across multiple length scales, from nanometer scale vortices, skyrmions, to mesoscopic stripe domains,, macroscopic twin patterns, making these phenomena central to condensed matter physics, nanotechnology. Silicon compatible ferroelectrics such as HfO2, ZrO2 spontaneously form alternating stacks of two dimensional (2D) polar, nonpolar half unit cell layers, effectively confining dipoles to isolated, single atomic plane layers. However, the arrangement of dipoles within each polar plane is generally considered uniform. Here, by utilizing scanning transmission electron microscopy (STEM) of an ultrathin ZrO2 film in the plan view orientation, we show that within these irreducibly narrow polar layers, the dipole organization can be strikingly non-uniform, forming atomically thin, dimensionally confined, charged 180 degree domain walls, at most a few unit cells long, alternating between head to head, tail to tail configurations. Head to head, tail to tail walls each adopt completely distinctive interfacial structures, confine the in-plane domains to a sub nm2 footprint, making them one of the smallest domains to be reported in any polar material. This work represents the first experimental observation of antipolar ferroic ordering via strongly charged domain walls, while being nested within the self organized polar nonpolar layering, revealing a novel hierarchical self-organization of polar textures at the atomic scale,, opening new pathways to atomically dense memories, domain wall nanoelectronics in silicon compatible, simple binary oxides.",
+    "year": 2026,
+    "venue": "Advanced Materials (accepted)",
+    "abstract": "Direct microscopy reveals closely spaced head-to-head and tail-to-tail charged walls in ultrathin ZrO2, compressing ferroelectric domains to sub-nm2 footprints. First-principles analysis connects the walls to flat polar phonon bands and oxygen-interstitial charge compensation, and predicts conductive walls with very low propagation barriers for dense, low-voltage domain-wall nanoelectronics.",
     "scholar": "https://arxiv.org/abs/2507.18920",
     "doi": ""
   },
