@@ -4,15 +4,51 @@
     "authors": "Pravan Omprakash, Nicholas Crnkovich, John Cavin, Nathan Curtis, Adrien Couet, Rohan Mishra",
     "year": 2026,
     "venue": "arXiv preprint arXiv:2609.06627",
-    "abstract": "A scalable first-principles framework predicts temperature-composition phase diagrams for refractory alloys by combining DFT mixing enthalpies with sub-regular solution models. The study predicts 36 binary and 86 ternary systems, benchmarks 51 phase diagrams against experiment and CALPHAD, and makes the results available through the RAPTor web interface.",
+    "abstract": "A scalable first-principles framework predicts temperature-composition phase diagrams for refractory alloys by combining DFT mixing enthalpies with sub-regular solution models. The method is validated against 36 binary and 15 ternary phase diagrams, with the resulting predictions and analysis tools made available through RAPTor.",
     "scholar": "https://arxiv.org/abs/2609.06627",
     "doi": "https://doi.org/10.48550/arXiv.2609.06627"
+  },
+  "pub18": {
+    "title": "Thermodynamic Origins of Multimode Spinodal Decomposition in Multicomponent Alloys",
+    "authors": "Pravan Omprakash",
+    "year": 2026,
+    "venue": "arXiv preprint arXiv:2610.00351",
+    "abstract": "This sole-author study explains why multicomponent alloys usually decompose through one pseudobinary mode and identifies interaction patterns that allow two independent composition directions to become unstable. A phase-specific screen highlights candidate alloys with nearly balanced modes and connects their thermodynamics to distinct phase-field microstructures.",
+    "scholar": "https://arxiv.org/abs/2610.00351",
+    "doi": "https://doi.org/10.48550/arXiv.2610.00351"
+  },
+  "pub19": {
+    "title": "Beyond the Binary Hull: Higher-Order Thermodynamic Stabilization in Inorganic Ternary Compounds",
+    "authors": "Pravan Omprakash",
+    "year": 2026,
+    "venue": "arXiv preprint arXiv:2609.17098",
+    "abstract": "This sole-author work defines emergent ternary stabilization energy as the energy gained by bringing three elements into one crystal beyond every unary and binary competitor. Applied to 19,209 Materials Project compounds, the metric reveals how chemistry, electronic structure, and local coordination create stability that cannot be inherited from binaries alone.",
+    "scholar": "https://arxiv.org/abs/2609.17098",
+    "doi": "https://doi.org/10.48550/arXiv.2609.17098"
+  },
+  "pub20": {
+    "title": "Twist-Induced Out-of-Plane Ferroelectricity in Bilayer Hafnia",
+    "authors": "Jian Huang, Gwan Yeong Jung, Pravan Omprakash, Guodong Ren, Xin Li, Xilong Xu, Du Li, Xiaoshan Xu, Li Yang, Rohan Mishra",
+    "year": 2026,
+    "venue": "Nano Letters",
+    "abstract": "First-principles calculations predict that twisting two stable 1T-HfO2 monolayers breaks interlayer symmetry and creates switchable out-of-plane polarization. The resulting moiré bilayer combines atomically thin ferroelectricity with a low sliding barrier, offering a path toward tunable memory and logic devices.",
+    "scholar": "https://doi.org/10.1021/acs.nanolett.6c04005",
+    "doi": "https://doi.org/10.1021/acs.nanolett.6c04005"
+  },
+  "pub21": {
+    "title": "Activating Basal Planes in Transition Metal Dichalcogenides for CO2 Reduction to CO through Alloying",
+    "authors": "Eric Montufar-Morales, Daniel Rinder, Pravan Omprakash, Rohan Mishra, Gwan Yeong Jung",
+    "year": 2026,
+    "venue": "arXiv preprint arXiv:2609.30432",
+    "abstract": "A computational screen shows how sulfur vacancies activate otherwise inert transition-metal-dichalcogenide basal planes while solid-solution alloying tunes intermediate adsorption energies. The study identifies (Nb,Ta)S2 as a promising CO2-reduction catalyst and establishes a combined defect-engineering and alloying strategy.",
+    "scholar": "https://arxiv.org/abs/2609.30432",
+    "doi": "https://doi.org/10.48550/arXiv.2609.30432"
   },
   "pub14": {
     "title": "Graph Representational Learning for bandgap prediction in varied perovskite crystals",
     "authors": "Pravan Omprakash, Bharadwaj M, Romit Srivastava, Ankit Sandeep, Viswesh P, Devadas Bhat Panemangalore",
     "year": 2021,
-    "venue": "Computational Material Science",
+    "venue": "Computational Materials Science",
     "abstract": "Perovskites are an important class of materials that are actively researched for applications in solar cells, other optoelectronic devices due to their ease of fabrication, tuneable bandgaps. High throughput computational techniques like Density Functional Theory (DFT), Machine Learning (ML) are viable methods to accelerate discovery of new perovskite materials with favourable properties. ML specifically is faster, requires lesser computational power. We recognized the importance of having robust datasets for ML, hence collated a dataset of varied perovskite structures along with their indirect bandgaps. We employed a graph representational learning technique, trained a model that predicted bandgaps for all types of perovskites. The model has a mean absolute error of 0.28 eV, can predict bandgap in a few milliseconds. The metric of generalization gap is introduced to quantify the …",
     "scholar": "https://www.sciencedirect.com/science/article/pii/S0927025621002573",
     "doi": ""
@@ -75,10 +111,10 @@
     "title": "Antiferroelectric Hafnia Down to the 2D Limit",
     "authors": "Xin Li, Guodong Ren, Haidong Lu, Kartik Samanta, Amit Kumar Shah, Kai Huang, Pravan Omprakash, Yu Yun, Pratyush Buragohain, Huibo Cao, Yan Wu, Jordan A. Hachtel, Andrew R. Lupini, Miaofang Chi, Juan Carlos Idrobo, Evgeny Y. Tsymbal, Alexei Gruverman, Rohan Mishra, Xiaoshan Xu",
     "year": 2026,
-    "venue": "Science (accepted)",
-    "abstract": "The discovery of ferroelectricity in hafnia-based materials have boosted the potential of incorporating ferroelectrics in advanced electronics, thanks to their compatibility with silicon technology. However, comprehending why these materials defy the common trend of reduced ferroelectric ordering at the nanoscale,, the mechanism that stabilizes the ferroelectric phase (absent in hafnia phase diagram) presents significant challenges to traditional knowledge of ferroelectricity. In this work, we show that the formation of the orthorhombic ferroelectric phase (o-FE, space group Pca21) of the single-crystalline epitaxial films of 10% La-doped HfO2 (LHO) on (111)-oriented yttria stabilized zirconia (YSZ) relies on the stability of the high-pressure orthorhombic antiferroelectric phase (o-AFE, space group Pbca). Our detailed structural characterizations demonstrate that as-grown LHO films represent largely the o-AFE phase being thermodynamically stabilized by the compressive strain. Our Kelvin probe force microscopy studies show, under mechanical poling, the o-AFE phase is converted to the o-FE phase which remains stable under ambient conditions. We find that the orthorhombic phase stability is enhanced in thinner films down to one-unit-cell thickness, a trend that is unknown in any other ferroelectric films. This is due to the vanishing depolarization field of the o-AFE phase, the isomorphic LHO/YSZ interface, supporting strain-enhanced ferroelectricity in the ultrathin films. This results in an unprecedented increase of the Curie temperature up to 850 {\\deg}C, the highest reported for sub-nanometer-thick ferroelectrics. Overall, our findings opens …",
-    "scholar": "https://arxiv.org/abs/2408.01830",
-    "doi": ""
+    "venue": "Science",
+    "abstract": "Experiments and first-principles analysis show that compressive strain stabilizes an antiferroelectric orthorhombic phase in La-doped hafnia down to a single unit cell. Mechanical poling converts it to a persistent ferroelectric phase, revealing an unusual route to robust polarization at the two-dimensional limit.",
+    "scholar": "https://doi.org/10.1126/science.ady5526",
+    "doi": "https://doi.org/10.1126/science.ady5526"
   },
   "pub7": {
     "title": "Polarization pinning at antiphase boundaries in multiferroic YbFeO3",
@@ -111,10 +147,10 @@
     "title": "Sub-nm2 ferroelectric domains via charged 180 degree walls in ZrO2",
     "authors": "Nashrah Afroze, Hamoon Fahrvandi, Guodong Ren, Pawan Kumar, Christopher Nelson, Sarah Lombardo, Mengkun Tian, Ping-Che Lee, Jiayi Chen, Manifa Noor, Kisung Chae, Sanghyun Kang, Prasanna Venkat Ravindran, Matthew Bergschneider, Gwan Yeong Jung, Pravan Omprakash, Gardy K Ligonde, Nujhat Tasneem, Dina Triyoso, Steven Consiglio, Kanda Tapily, Robert Clark, Gert Leusink, Jayakanth Ravichandran, Shimeng Yu, Andrew Lupini, Andrew Kummel, Kyeongjae Cho, Duk-Hyun Choe, Nazanin Bassiri-Gharb, Josh Kacher, Rohan Mishra, Jun Hee Lee, Asif Khan",
     "year": 2026,
-    "venue": "Advanced Materials (accepted)",
-    "abstract": "Direct microscopy reveals closely spaced head-to-head and tail-to-tail charged walls in ultrathin ZrO2, compressing ferroelectric domains to sub-nm2 footprints. First-principles analysis connects the walls to flat polar phonon bands and oxygen-interstitial charge compensation, and predicts conductive walls with very low propagation barriers for dense, low-voltage domain-wall nanoelectronics.",
-    "scholar": "https://arxiv.org/abs/2507.18920",
-    "doi": ""
+    "venue": "Advanced Materials",
+    "abstract": "Direct microscopy reveals closely spaced head-to-head and tail-to-tail charged walls in ultrathin ZrO2, compressing ferroelectric domains to sub-nm2 footprints. First-principles analysis connects the walls to flat polar phonon bands and oxygen-interstitial charge compensation, with implications for dense domain-wall nanoelectronics.",
+    "scholar": "https://doi.org/10.1002/adma.75144",
+    "doi": "https://doi.org/10.1002/adma.75144"
   },
   "pub4": {
     "title": "Design Principles, Identification of Birefringent Materials",
@@ -138,7 +174,7 @@
     "title": "SymPlex Plots for Visualizing Properties in High-Dimensional Alloy Spaces",
     "authors": "John Cavin, Pravan Omprakash, Adrien Couet, Rohan Mishra",
     "year": 2025,
-    "venue": "Scripta Materalia",
+    "venue": "Scripta Materialia",
     "abstract": "Conventional visualization tools such as phase diagrams, convex hulls are ill-suited to visualize multiple principal element alloys (MPEAs) due to their large compositional space that cannot be easily projected onto two dimensions. Here, SymPlex plots are introduced to enable the visualization of various properties along special paths in high-dimensional phase spaces of MPEAs. These are polar heatmaps that plot properties along high-symmetry paths radiating from the parent equimolar MPEA to a set of chosen lower-order compositions. SymPlex plots capture the changes in the energy landscape along the special paths, help visualize the effect of addition or substitution of components on the alloy stability, which can be especially useful to assess processing pathways for additive manufacturing. Thus, SymPlex plots can help guide design of MPEAs by showing connections between compositions, their properties in the high-dimensional phase space with more information concentrated near the equimolar region.",
     "scholar": "https://www.sciencedirect.com/science/article/abs/pii/S1359646225003033",
     "doi": ""

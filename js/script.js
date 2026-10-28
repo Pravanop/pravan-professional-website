@@ -82,77 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const projectData = {
-    proj1: {
-      title: "SymPlex Visualization Framework",
-      description: "A Python visualization framework for projecting N-component composition spaces into intuitive two-dimensional polar maps. SymPlex concentrates information around equimolar compositions while preserving meaningful pathways to lower-order alloys.",
-      links: [
-        { label: "View code", url: "https://github.com/Materials-Modelling-Microscopy/Symplex", primary: true },
-        { label: "Read paper", url: "https://doi.org/10.1016/j.scriptamat.2025.116840" },
-        { label: "View poster", url: "assets/posters/TMS26.pdf" }
-      ],
-      related: ["Scripta Materialia, 2025", "Presented at MRS Fall 2025"]
-    },
-    proj2: {
-      title: "Alloy Thermodynamics Toolkit",
-      description: "A modular computational workflow for rapidly evaluating solid-solution and precipitate stability in high-entropy alloys. It combines first-principles inputs, classical thermodynamic models, and interpretable visual outputs.",
-      links: [
-        { label: "View poster", url: "assets/posters/farheaa_poster.png", primary: true }
-      ],
-      related: ["Active research project", "Open-source release in preparation"]
-    },
-    proj3: {
-      title: "Spinodal Decomposition in Complex Materials",
-      description: "A phase-field simulation framework for exploring how free-energy landscapes, elastic effects, and composition influence phase-segregated microstructures in multicomponent materials.",
-      links: [],
-      related: ["Active research project", "Code and results in preparation"]
-    }
-  };
-
-  const projectModal = document.getElementById("projModal");
-  const projectTitle = document.getElementById("proj-title");
-  const projectDescription = document.getElementById("proj-desc");
-  const projectLinks = document.getElementById("proj-links");
-  const projectRelated = document.getElementById("proj-related");
-
-  document.querySelectorAll(".project-card").forEach(card => {
-    const trigger = card.querySelector(".card-hit");
-    trigger.addEventListener("click", () => {
-      const project = projectData[card.dataset.proj];
-      if (!project) return;
-      projectTitle.textContent = project.title;
-      projectDescription.textContent = project.description;
-      projectLinks.replaceChildren();
-      project.related = project.related || [];
-
-      project.links.forEach(link => {
-        const anchor = document.createElement("a");
-        anchor.className = `button ${link.primary ? "button-primary" : "button-secondary"}`;
-        anchor.href = link.url;
-        anchor.target = "_blank";
-        anchor.rel = "noopener";
-        anchor.innerHTML = `${link.label} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>`;
-        projectLinks.append(anchor);
-      });
-
-      projectRelated.replaceChildren();
-      if (project.related.length) {
-        const label = document.createElement("p");
-        label.textContent = "Project status";
-        projectRelated.append(label);
-        project.related.forEach(item => {
-          const line = document.createElement("span");
-          line.textContent = item;
-          line.style.display = "block";
-          line.style.color = "var(--muted)";
-          line.style.marginTop = "8px";
-          projectRelated.append(line);
-        });
-      }
-      openModal(projectModal, trigger);
-    });
-  });
-
   const publicationModal = document.getElementById("pubModal");
   const modalTitle = document.getElementById("modal-title");
   const modalAuthors = document.getElementById("modal-authors");
@@ -160,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalScholar = document.getElementById("modal-scholar");
   let publicationData = {};
 
-  fetch("assets/data/publications.json?v=2")
+  fetch("assets/data/publications.json?v=3")
     .then(response => {
       if (!response.ok) throw new Error("Publication data could not be loaded.");
       return response.json();
