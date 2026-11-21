@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pravanop.github.io/pravan-professional-website/sitemap.xml

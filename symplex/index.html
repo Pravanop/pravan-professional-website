@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SymPlex is a symmetry-conserving visualization method developed by Pravan Omprakash for properties in high-dimensional alloy composition spaces." />
+  <meta name="author" content="Pravan Omprakash" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0a0c0e" />
+  <title>SymPlex | High-Dimensional Alloy Visualization by Pravan Omprakash</title>
+  <link rel="canonical" href="https://pravanop.github.io/pravan-professional-website/symplex/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pravanop.github.io/pravan-professional-website/symplex/" />
+  <meta property="og:title" content="SymPlex | Visualizing High-Dimensional Alloy Spaces" />
+  <meta property="og:description" content="Symmetry-conserving polar plots for properties across multi-principal-element alloy composition spaces." />
+  <meta property="og:image" content="https://pravanop.github.io/pravan-professional-website/assets/images/symplex.png" />
+  <meta property="og:image:alt" content="SymPlex visualization of a high-dimensional alloy property landscape" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SymPlex | High-Dimensional Alloy Visualization" />
+  <meta name="twitter:description" content="Symmetry-conserving polar plots for multi-principal-element alloy composition spaces." />
+  <meta name="twitter:image" content="https://pravanop.github.io/pravan-professional-website/assets/images/symplex.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "SymPlex",
+    "description": "A method and open-source implementation for decomposing high-dimensional simplices into high-symmetry paths for alloy-property visualization.",
+    "url": "https://pravanop.github.io/pravan-professional-website/symplex/",
+    "codeRepository": "https://github.com/Materials-Modelling-Microscopy/Symplex",
+    "programmingLanguage": ["Python", "Jupyter Notebook"],
+    "applicationCategory": "Scientific visualization software",
+    "author": {"@type": "Person", "name": "Pravan Omprakash", "url": "https://pravanop.github.io/pravan-professional-website/"}
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="icon" href="../assets/images/profile_image_formal.jpeg" />
+  <link rel="stylesheet" href="../css/project.css?v=1" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="project-header"><div class="shell header-inner"><a class="brand" href="../"><span class="brand-mark">PO</span><span>Pravan Omprakash</span></a><nav class="header-nav" aria-label="Project navigation"><a href="../#projects">All software</a><a href="https://github.com/Materials-Modelling-Microscopy/Symplex" target="_blank" rel="noopener">GitHub</a><a href="https://doi.org/10.1016/j.scriptamat.2025.116840" target="_blank" rel="noopener">Paper</a></nav></div></header>
+  <main id="content">
+    <section class="hero shell"><div><p class="eyebrow">Scientific visualization · First-author research</p><h1>Sym<em>Plex</em></h1><p class="lede">A symmetry-conserving polar-plot method for seeing how calculated or measured properties change across high-dimensional multi-principal-element alloy spaces.</p><div class="actions"><a class="button button-primary" href="https://doi.org/10.1016/j.scriptamat.2025.116840" target="_blank" rel="noopener">Read the paper</a><a class="button button-secondary" href="https://github.com/Materials-Modelling-Microscopy/Symplex" target="_blank" rel="noopener">View source on GitHub</a></div></div><div class="hero-visual"><img src="../assets/images/symplex.png" alt="SymPlex visualization of a high-dimensional alloy property landscape" /><span class="hero-note">High-dimensional composition spaces, organized around their symmetry.</span></div></section>
+    <div class="project-strip"><div class="shell strip-inner"><div class="fact"><span>Role</span><strong>Contributing first author and lead developer</strong></div><div class="fact"><span>Published</span><strong>Scripta Materialia · 2025</strong></div><div class="fact"><span>Workflow</span><strong>Python + Jupyter</strong></div></div></div>
+    <section class="section shell"><div class="section-head"><div><p class="section-label">The problem</p><h2>See the whole alloy space without <em>flattening its symmetry.</em></h2></div><p class="section-intro">Binary and ternary diagrams are intuitive; four or more components are not. SymPlex decomposes a high-dimensional composition simplex into representative high-symmetry paths, making multicomponent trends visible without pretending the underlying geometry is two-dimensional.</p></div></section>
+    <section class="section dark-section"><div class="shell"><div class="section-head"><div><p class="section-label">What the method preserves</p><h2>A visual grammar for <em>complex composition.</em></h2></div><p class="section-intro">The plot is designed around equivalence and symmetry, so repeated information is compressed while important compositional relationships remain readable.</p></div><div class="feature-grid"><article class="feature"><span class="feature-index">01</span><h3>High-symmetry paths</h3><p>Decompose an N-component simplex into paths that capture representative composition trends.</p></article><article class="feature"><span class="feature-index">02</span><h3>Symmetry conservation</h3><p>Keep equivalent directions and regions visually consistent instead of choosing an arbitrary projection.</p></article><article class="feature"><span class="feature-index">03</span><h3>Property agnostic</h3><p>Visualize precomputed thermodynamic, structural, electronic, or custom user-supplied quantities.</p></article><article class="feature"><span class="feature-index">04</span><h3>Polar organization</h3><p>Arrange high-dimensional paths in a compact polar layout that supports comparison at a glance.</p></article><article class="feature"><span class="feature-index">05</span><h3>Reproducible notebooks</h3><p>Use the supplied example notebook to load existing properties or construct plots from new data.</p></article><article class="feature"><span class="feature-index">06</span><h3>Integrated research use</h3><p>Apply the method inside RAPTor to inspect phase fractions, stability measures, and spinodal metrics.</p></article></div></div></section>
+    <section class="section shell"><div class="research-panel"><div class="research-copy"><p class="section-label">Research connection</p><h2>Published method, reusable implementation.</h2><p>The SymPlex paper introduces the visualization strategy and demonstrates why conventional low-dimensional slices can miss the structure of a multi-principal-element composition space. The repository turns that method into an inspectable notebook workflow, and RAPTor extends it into interactive thermodynamic exploration.</p><div class="actions"><a class="button button-primary" href="https://doi.org/10.1016/j.scriptamat.2025.116840" target="_blank" rel="noopener">Read in Scripta Materialia</a><a class="button button-secondary" href="https://github.com/Materials-Modelling-Microscopy/Symplex/blob/main/example.ipynb" target="_blank" rel="noopener">Open the example notebook</a></div><div class="code-note">Omprakash et al. · Scripta Materialia 264 (2025) 116840</div></div><div class="research-visual"><img src="../assets/images/symplex.png" alt="Published SymPlex plot for a multicomponent alloy property" /></div></div></section>
+    <section class="section dark-section"><div class="shell"><div class="section-head"><div><p class="section-label">Explore next</p><h2>Related <em>software and research.</em></h2></div><p class="section-intro">SymPlex is both a standalone visualization method and a core way of seeing results inside the broader RAPTor platform.</p></div><div class="next-grid"><a class="next-card" href="../raptor/"><span>Alloy thermodynamics</span><div><h3>RAPTor</h3><p>Use SymPlex maps inside an integrated phase-stability platform.</p></div></a><a class="next-card" href="../distortkit/"><span>Crystal symmetry</span><div><h3>DistortKit</h3><p>Resolve structural changes into interpretable symmetry modes.</p></div></a><a class="next-card" href="../#publications"><span>Research portfolio</span><div><h3>Selected papers</h3><p>See this work in the context of the broader publication record.</p></div></a></div></div></section>
+  </main>
+  <footer class="project-footer"><div class="shell footer-inner"><p>© 2026 Pravan Omprakash</p><div class="footer-links"><a href="../">Portfolio</a><a href="https://github.com/Pravanop" target="_blank" rel="noopener">GitHub</a><a href="https://scholar.google.com/citations?user=MzkdGtsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a><a href="mailto:o.pravan@wustl.edu">Email</a></div></div></footer>
+</body>
+</html>
