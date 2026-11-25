@@ -1,4 +1,13 @@
 {
+  "pub22": {
+    "title": "First-principles-based Prediction of Phase Fields: Part II. Solid Solution Tunability in Refractory Complex Concentrated Alloys",
+    "authors": "Pravan Omprakash, Nicholas Crnkovich, Nathan Curtis, John Cavin, Adrien Couet, Rohan Mishra",
+    "year": 2026,
+    "venue": "arXiv preprint arXiv:2611.26866",
+    "abstract": "This work maps solid-solution stability across refractory complex concentrated alloys composed of Cr, Hf, Mo, Nb, Ta, Ti, V, W, and Zr. Benchmarking against 109 experimentally reported quaternary-to-senary compositions yields 80% classification accuracy. The study introduces percentage miscible region as a measure that separates robust solid-solution-forming systems from compositionally tunable multiphase systems, and identifies how binary interactions and individual elements shape higher-order miscibility.",
+    "scholar": "https://arxiv.org/abs/2611.26866",
+    "doi": "https://doi.org/10.48550/arXiv.2611.26866"
+  },
   "pub17": {
     "title": "First-principles-based Prediction of Phase Fields: Part I. Binary and Ternary Refractory Alloys",
     "authors": "Pravan Omprakash, Nicholas Crnkovich, John Cavin, Nathan Curtis, Adrien Couet, Rohan Mishra",

@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalScholar = document.getElementById("modal-scholar");
   let publicationData = {};
 
-  fetch("assets/data/publications.json?v=3")
+  fetch("assets/data/publications.json?v=4")
     .then(response => {
       if (!response.ok) throw new Error("Publication data could not be loaded.");
       return response.json();
